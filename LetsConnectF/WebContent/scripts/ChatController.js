@@ -1,6 +1,6 @@
 /**
  * 
- *//*
+ */
 var ChatModule=angular.module("ChatModule", []);
 
 
@@ -34,7 +34,7 @@ ChatModule.factory('chatFactory', ['$http', '$q',
     }; 
 
     service.RECONNECT_TIMEOUT = 30000;
-    service.SOCKET_URL = "http://localhost:9090/LetsConnectB/chat";
+    service.SOCKET_URL = "http://localhost:9097/LetsConnectB/chat";
     service.CHAT_TOPIC = "/topic/message";
     service.CHAT_BROKER = "/app/chat";
 
@@ -98,4 +98,4 @@ ChatModule.factory('chatFactory', ['$http', '$q',
         
     return service;   
 
-}])*/
+}])

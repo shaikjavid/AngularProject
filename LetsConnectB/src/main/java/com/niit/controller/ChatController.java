@@ -1,4 +1,4 @@
-/*package com.niit.controller;
+package com.niit.controller;
 
 import java.util.Date;
 
@@ -22,4 +22,4 @@ public class ChatController {
 	 // System.out.println(message);
     return new OutputMessage(message, new Date());
   }
-}*/
+}

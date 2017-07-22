@@ -1,4 +1,4 @@
-/*package com.niit.model;
+package com.niit.model;
 
 public class Message {
 
@@ -29,4 +29,4 @@ public class Message {
 	  public void setId(int id) {
 	    this.id = id;
 	  }
-}*/
+}

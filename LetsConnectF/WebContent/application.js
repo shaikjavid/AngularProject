@@ -1,7 +1,7 @@
 /**
  * 
  */
-var app=angular.module('MyApplication',['ngRoute','regmodule','JobModule','loginapp','FriendModule','BlogModule','StudentJobModule','ngCookies']);
+var app=angular.module('MyApplication',['ngRoute','regmodule','JobModule','loginapp','FriendModule','BlogModule','ChatModule','StudentJobModule','ngCookies']);
 
 app.constant('REST_URI','http://localhost:9097/LetsConnectB/');
 
@@ -78,13 +78,12 @@ app.config(function($routeProvider)
 	})
 	
 	
-	/*.when("/chat",
+	.when("/chat",
 	{
     templateUrl:'./userdata/chat.html',
     controller:'ChatCtrl',
-    controllerAs:"ChatCtrl"
-    
-    })*/
+        
+    })
     
 	.when("/jobposting",
 			

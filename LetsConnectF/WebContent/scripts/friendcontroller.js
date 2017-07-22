@@ -87,6 +87,7 @@ FriendModule.controller('FriendController',function(FriendServices,$rootScope,$c
            {
                console.log(response);
                frndCtrl.allUsers=response.data;
+               frndCtrl.suggestedFriends(frndCtrl.currentUser.userid);
                
            },function(error)
            {
@@ -113,6 +114,8 @@ FriendModule.controller('FriendController',function(FriendServices,$rootScope,$c
                 console.log(response);
                 frndCtrl.frndRequests=response.data;
                 frndCtrl.getFriends();
+                frndCtrl.getFriendRequests();
+                
             },
             function(error)
             {
