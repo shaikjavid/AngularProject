@@ -16,6 +16,7 @@ FriendModule.controller('FriendController',function(FriendServices,$rootScope,$c
              function(success)
              {
                  console.log("suggested friends::::"+success);
+                 
                  $cookieStore.put('allUsers',success.data);
                  frndCtrl.allUsers=success.data;
 

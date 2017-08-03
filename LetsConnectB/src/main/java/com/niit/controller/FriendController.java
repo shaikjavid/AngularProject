@@ -84,7 +84,7 @@ public class FriendController {
      public ResponseEntity<List<Connect>> suggestedFriends(@PathVariable("id") Integer id)
      {
     	 System.out.println("user Id for suggestedFriends:::::"+id);
-    	List users= friendsDao.suggestFriends(id);
+    	List<Connect> users= friendsDao.suggestFriends(id);
      
     	 return new ResponseEntity<List<Connect>>(users, HttpStatus.OK);
      }

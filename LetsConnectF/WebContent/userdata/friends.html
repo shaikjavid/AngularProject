@@ -10,11 +10,12 @@
     
     <div ng-repeat="user in frndCtrl.allUsers">
          
-      <div ng-if="user.userName!='admin'" >
+      <div ng-if="user.username!='admin'" >
     <div class="col-md-2">
     <div class="thumbnail">
       
         <div class="caption">
+        
             <p>{{user.username}}</p>
           <button ng-click="frndCtrl.addFriend(user.userid)" class="btn btn-primary">Add Friend</button>
         </div>

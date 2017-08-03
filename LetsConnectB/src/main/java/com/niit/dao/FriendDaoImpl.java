@@ -65,14 +65,15 @@ public class FriendDaoImpl implements FriendDao{
 	public List<Connect> suggestFriends(Integer id) {
 		// TODO Auto-generated method stub
 		try {
-			SQLQuery query= sessionFactory.getCurrentSession().createSQLQuery("select * from Connect_User where userid in (select userid from Connect_User where userid!=? minus (select userId from Friend where friendId=?"
-					+ "union select userId from Friend where userId=?"
-					+ "))");
-			query.setInteger(0, id);
-			query.setInteger(1, id);
-			query.setInteger(2, id);
-			query.addEntity(Connect.class);
-			return (List<Connect>)query.list();
+		return	(List<Connect>)sessionFactory.getCurrentSession().createSQLQuery("select * from Connect_User where userid not in ((select friendid from Friend where userid=? or friendid=?) union (select userid from Friend where userid=? or friendid=?))")
+				.addEntity(Connect.class)
+			.setInteger(0, id)
+			.setInteger(1, id)
+			.setInteger(2, id)
+			.setInteger(3, id).getResultList();
+			
+			
+			 
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
